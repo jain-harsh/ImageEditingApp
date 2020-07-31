@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:paddingBottom="30dp"
+    tools:context=".MainActivity">
+
+
+    <include
+        layout="@layout/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_toolbar"/>
+
+
+    <ImageView
+        android:id="@+id/edit_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:layout_above="@id/relative"
+        android:layout_below="@id/image_toolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/first_layout"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/addText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="3dp"
+                android:layout_weight="2"
+                android:text="Add Text" />
+
+            <Button
+                android:id="@+id/sticker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="add sticker" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/first_layout"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/undo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="27dp"
+                android:background="@drawable/undo"
+                android:clickable="false" />
+
+            <ImageView
+                android:id="@+id/crop"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="27dp"
+                android:background="@drawable/crop"
+                android:clickable="false" />
+
+            <ImageView
+                android:id="@+id/rotate"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="27dp"
+                android:background="@drawable/rotate_right"
+                android:clickable="false" />
+
+            <ImageView
+                android:id="@+id/brush"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/brush"
+                android:clickable="false" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
